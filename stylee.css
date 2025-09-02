@@ -1,0 +1,144 @@
+:root {
+    /* Bootstrap theme colors (optional overrides) */
+    --bs-primary: #0d6efd;
+    --bs-dark: #212529;
+    --bs-light: #f8f9fa;
+    --bs-success: #198754;
+    --bs-danger: #dc3545;
+    --bs-warning: #ffc107;
+    --bs-info: #0dcaf0;
+    --bs-white: #ffffff;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+
+    /* Default carousel aspect ratio for small screens */
+    --carousel-ratio: 4/3;
+}
+
+/* Table border thickness example (keep if you like) */
+.table-bordered {
+    border: 0.2rem solid var(--bs-primary);
+}
+
+/* ---- Responsive Carousel (no fixed heights) ---- */
+
+/* Remove any fixed height/overflow that can crop images */
+#heroCarousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Let each slide define its own responsive height via aspect-ratio */
+.carousel-item {
+    position: relative;
+    aspect-ratio: var(--carousel-ratio);
+}
+
+/* Make the image fill the slide cleanly without distortion */
+.carousel-item>.carousel-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Caption positioning: centered on mobile */
+.carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: min(92%, 800px);
+}
+
+/* Responsive caption typography */
+.carousel-caption h5 {
+    font-size: clamp(1.2rem, 2.8vw, 2.5rem);
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+    color: #f1f1f1;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+
+/* card hover "pop" */
+.card-hover {
+    transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .12);
+}
+
+/* keep card images neat */
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* arrows (prev/next) positioning */
+#cardCarousel .carousel-control-prev,
+#cardCarousel .carousel-control-next {
+    top: 35%;
+    /* 👈 moves arrow upwards (adjust this %) */
+    transform: translateY(-50%);
+    width: 7%;
+    /* arrow button area width */
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Bigger & clearer arrow icons */
+#cardCarousel .carousel-control-prev-icon,
+#cardCarousel .carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* dark background */
+    border-radius: 50%;
+    /* circular button */
+    background-size: 70% 70%;
+    /* resize arrow inside */
+}
+
+
+
+/* ---- Breakpoints: adjust slide ratio and caption alignment ---- */
+@media (min-width: 576px) {
+    :root {
+        --carousel-ratio: 3/2;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --carousel-ratio: 16/9;
+    }
+
+    .carousel-caption {
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
+        width: min(90%, 900px);
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --carousel-ratio: 21/9;
+    }
+}

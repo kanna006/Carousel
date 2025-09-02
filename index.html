@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Project Tittle -->
+    <title>Carousel</title>
+
+    <!-- Favorite icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap 5 CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./stylee.css">
+
+    <!-- Font awesome icons CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header class="h-100 w-100"><!-- parentContainer -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><!-- componentContainer -->
+            <div class="container-fluid"><!-- row -->
+
+                <!-- Logo + Name -->
+                <a class="navbar-brand d-flex align-items-center me-5" href="#">
+                    <img src="./assets/img/logo.jpeg" alt="Logo" width="40" height="40" class="me-3 ms-5">
+                    <span class="text-dark">MyWebsite</span>
+                </a>
+
+                <!-- Search box (right after brand) -->
+                <form class="d-flex me-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+
+                <!-- Toggler (for mobile view) -->
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+                        <li class="nav-item"> <a class="nav-link active text-dark" href="#">Home</a> </li>
+                        <li class="nav-item"> <a class="nav-link text-dark" href="#">About</a> </li>
+                        <li class="nav-item"> <a class="nav-link text-dark" href="#">Movie</a> </li>
+                        <li class="nav-item"> <a class="nav-link text-dark" href="#">Series</a> </li>
+                        <li class="nav-item"> <a class="nav-link text-dark" href="#">Services</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- carousel -->
+        <div class="carousel py-2"><!-- component -->
+            <div class="container-fluid"><!-- componentContainer -->
+                <div class="row"><!-- row -->
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 "><!-- column -->
+                        <div class="h-100 w-100"><!-- subcolumn -->
+
+                            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                                <!-- Indicators -->
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+                                </div>
+
+                                <!-- Slides -->
+                                <div class="carousel-inner">
+
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active" data-bs-interval="3000">
+                                        <img src="./assets/img/girl.jpg" class="d-block w-100 carousel-img"
+                                            alt="Slide 1">
+                                        <div class="carousel-caption">
+                                            <h5>Adventure Awaits</h5>
+                                            <p>Exploring new horizons with a free spirit.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="carousel-item" data-bs-interval="3000">
+                                        <img src="./assets/img/solo-leaving.jpg" class="d-block w-100 carousel-img"
+                                            alt="Slide 2">
+                                        <div class="carousel-caption">
+                                            <h5>Journey of Solitude</h5>
+                                            <p>Walking alone, yet never truly lost.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div class="carousel-item" data-bs-interval="3000">
+                                        <img src="./assets/img/mountain.jpg" class="d-block w-100 carousel-img"
+                                            alt="Slide 3">
+                                        <div class="carousel-caption">
+                                            <h5>Majestic Heights</h5>
+                                            <p>Where the mountains touch the skies.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 4 -->
+                                    <div class="carousel-item" data-bs-interval="3000">
+                                        <img src="./assets/img/sky.jpg" class="d-block w-100 carousel-img"
+                                            alt="Slide 4">
+                                        <div class="carousel-caption">
+                                            <h5>Skyline Dreams</h5>
+                                            <p>The city glows brighter as the sun sets.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 5 -->
+                                    <div class="carousel-item" data-bs-interval="3000">
+                                        <img src="./assets/img/me and you.jpg" class="d-block w-100 carousel-img"
+                                            alt="Slide 5">
+                                        <div class="carousel-caption">
+                                            <h5>Together Forever</h5>
+                                            <p>A timeless bond captured in a single moment.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="h-100 w-100"><!-- parentContainer -->
+        <section class="table py-3"><!-- component -->
+            <div class="container"><!-- componentContainer -->
+                <div class="row"><!-- row -->
+                    <div class="col-12 "><!-- column -->
+                        <div class="h-100 w-100 "><!-- subcolumn -->
+                            <h2 class="mb-4 text-center">Bootstrap Table Example</h2>
+
+                            <!-- Table with Bootstrap contextual classes -->
+                            <table class="table table-bordered table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-primary">
+                                        <th scope="row">1</th>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                        <td>1234567890</td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <th scope="row">2</th>
+                                        <td>Jane</td>
+                                        <td>Smith</td>
+                                        <td>jane@example.com</td>
+                                        <td>1234567890</td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <th scope="row">3</th>
+                                        <td colspan="2">No Data</td>
+                                        <td>sam@example.com</td>
+                                        <td>1234567890</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="card-section mb-4"><!-- component -->
+            <div class="container"><!-- componentContainer -->
+                <div class="row "><!-- row -->
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 "><!-- column -->
+                        <div class="col"><!-- subcolumn -->
+                            <!-- Title -->
+                            <h1>Cards</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Cards -->
+                <div class="row g-3"><!-- row -->
+
+                    <!-- Card 1 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 "><!-- column -->
+                        <div class="card  h-100 w-100 card-hover"><!-- subcolumn -->
+                            <img src="./assets/img/card-1.jpeg" class="card-img-top" alt="Luffy">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">Quiet Morning Street</h5>
+                                <p class="card-text mb-3">
+                                    A peaceful town where the train glides silently above the road.
+                                </p>
+                                <a href="#" class="btn btn-primary mt-auto">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                        <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                            <img src="./assets/img/card-2.jpeg" class="card-img-top" alt="Zoro">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">City Under the Stars</h5>
+                                <p class="card-text mb-3">
+                                    A glowing skyline shining under the endless night sky.
+                                </p>
+                                <a href="#" class="btn btn-primary mt-auto">Discover</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                        <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                            <img src="./assets/img/card-3.jpeg" class="card-img-top" alt="Sanji">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">Endless Fields</h5>
+                                <p class="card-text mb-3">
+                                    Golden clouds float above a land of green and yellow fields.
+                                </p>
+                                <a href="#" class="btn btn-primary mt-auto">Journey</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                        <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                            <img src="./assets/img/card-4.jpeg" class="card-img-top" alt="Nami">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-2">Sunset in the City</h5>
+                                <p class="card-text mb-3">
+                                    The busy streets glow as the sun sets between tall buildings.
+                                </p>
+                                <a href="#" class="btn btn-primary mt-auto">Visit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- end row -->
+
+            </div><!-- end container -->
+        </section>
+
+
+
+
+        <section class="card-carousel py-4"><!-- component -->
+            <div class="container"><!-- componentContainer -->
+                <div id="cardCarousel" class="carousel slide " data-bs-ride="false">
+                    <div class="carousel-inner">
+
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3"><!-- row -->
+                                    
+                                <!-- Card 1 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-1.jpeg" class="card-img-top"
+                                            alt="Quiet Morning Street">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Tranquil Morning Path</h5>
+                                            <p class="card-text mb-3">Soft sunlight and calm streets set the scene for a
+                                                quiet start to the day.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card1Modal">Explore</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-2.jpeg" class="card-img-top"
+                                            alt="City Under the Stars">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Starlit Skyline</h5>
+                                            <p class="card-text mb-3">A dazzling city glowing brightly beneath a canvas
+                                                of endless stars.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card2Modal">Discover</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-3.jpeg" class="card-img-top"
+                                            alt="Endless Fields">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Boundless Meadows</h5>
+                                            <p class="card-text mb-3">Vast fields of gold and green stretch endlessly
+                                                under drifting clouds.</p>
+
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card3Modal">Journey</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-4.jpeg" class="card-img-top"
+                                            alt="Sunset in the City">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Golden Hour Cityscape</h5>
+                                            <p class="card-text mb-3">Skyscrapers shimmer warmly as the sun sets between
+                                                the towers.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card4Modal">Visit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <!-- Card 5 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-5.jpeg" class="card-img-top"
+                                            alt="Quiet Morning Street 2">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Morning Glow</h5>
+                                            <p class="card-text mb-3">The early light fills the streets with warmth and
+                                                gentle calmness.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card5Modal">Explore</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100  w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-6.jpeg" class="card-img-top"
+                                            alt="City Lights">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Neon Nights</h5>
+                                            <p class="card-text mb-3">Bright lights and reflections bring the city alive
+                                                after dark.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card6Modal">Discover</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 7 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-7.jpeg" class="card-img-top"
+                                            alt="Fields at Dusk">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Dusk Over the Fields</h5>
+                                            <p class="card-text mb-3">Golden skies blend with the quiet countryside as
+                                                evening arrives.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card7Modal">Journey</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 8 -->
+                                <div class="col-12 col-sm-6 col-md-4 col-lg-3"><!-- column -->
+                                    <div class="card h-100 w-100 card-hover"><!-- subcolumn -->
+                                        <img src="./assets/img/card-slide-8.jpeg" class="card-img-top"
+                                            alt="Evening Commute">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2">Evening Rush</h5>
+                                            <p class="card-text mb-3">The city slows down as the sunset paints the
+                                                horizon in warm colors.</p>
+                                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                                data-bs-target="#card8Modal">Visit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+</body>
+
+
+
+</html>
